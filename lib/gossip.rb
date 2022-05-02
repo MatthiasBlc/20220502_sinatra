@@ -29,4 +29,16 @@ class Gossip
     return selected_gossip[selected_gossips_id.to_i]
   end
   
+  def self.update(id, updated_author, updated_content)
+    gossip_updated = CSV.read("./db/gossip.csv")
+    puts gossip_updated.inspect
+    gossip_updated[id.to_i][0] = updated_author
+    gossip_updated[id.to_i][1] = updated_content
+    CSV.open("./db/gossip.csv", "w+") do |csv|
+      gossip_updated.each do |row_updated|
+        csv << row_updated
+      end
+    end
+  end
+  
 end

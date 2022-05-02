@@ -15,34 +15,15 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/gossips/:id/' do
-    
     erb :display_gossip, locals: {gossip: Gossip.find(params['id'])}
   end
 
+  get '/gossips/:id/edit' do
+    erb :edit, locals: {gossip: Gossip.find(params['id'])}
+  end
+
+  post '/gossips/:id/edit' do
+    Gossip.update(params["id"], params["updated_author"], params["updated_content"])
+    redirect '/'
+  end
 end
-
-
-# class Controller
-#   # attr_accessor :view
-
-#   # def initialize(view)
-#   #   @view = view
-#   # end
-  
-#   # def create_gossip
-#   #   params = view.display_create_gossip
-#   #   gossip = Gossip.new(params['id'], params['author'], params['content'])
-#   #   gossip.save
-#   # end
-#   # def all_gossip
-#   #   view.display_all_gossip
-#   #   Gossip.show_all
-#   # end
-#   # def delete_gossip
-#   #   view.display_destroy_gossip
-#   #   Gossip.show_all
-#   #   id = gets.chomp
-#   #   Gossip.delete(id)
-#   # end
-
-# end

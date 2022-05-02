@@ -11,7 +11,7 @@ This project is an educative project about the sinatra and how to build website 
 	
 ## Technologies
 Project is created with:
-* [Ruby 2.7.1](https://ruby-doc.org/core-2.7.1/)
+* [Ruby 2.7.4](https://ruby-doc.org/core-2.7.4/)
 * With the gems :'rspec', 'pry', 'rubocop', 'csv', 'sinatra', 'rack', 'shotgun'
 	
 ## Features

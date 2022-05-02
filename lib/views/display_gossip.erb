@@ -3,13 +3,14 @@
     <title>PAGE POTIN</title>
   </head>
   <body>
-    <h1>Voici la page du potin n°<% gossip%></h1>
+    <h1>Voici la page du potin n°<%= params['id']%></h1>
         <p>
            <%= gossip.author %><br/>
           <%= gossip.content %>
         </p>
  
-<p> retour à la page potin</p>
+ <p> <a href="/gossips/<%=params['id']%>/edit">Editer le gossip</a><br/>
+ <p><a href="/">retour à la page potin</a></p>
 
   </body>
 </html>
