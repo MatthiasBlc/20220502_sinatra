@@ -18,6 +18,7 @@ Project is created with:
 * The homepage display gossips présents in a csv database and a welcome message.
 * There is a page for create a new gossip.
 * Every gossips has his own page with a dynamic link.
+* The user can edit every gossip in the dedicated gossip pages.
 
 ## Sources
 This app is created through the [The Hacking Project](https://www.thehackingproject.org) bootcamp.
